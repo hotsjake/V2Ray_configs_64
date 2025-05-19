@@ -1,4 +1,4 @@
-nname: Sync MD to README
+name: Sync MD to README
 permissions: write-all
 on:
   schedule:
