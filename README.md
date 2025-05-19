@@ -10,8 +10,5 @@
 CTRL+A网页全选，CTRL+C复制，右键点击任务栏v2rayN客户端图标，左键点击从剪贴板批量导入URL，即可一键导入所有v2ray节点  
 
 # v2ray免费节点订阅  
-### [订阅]() 1：
-https://raw.githubusercontent.com/WLget/angus_configs_64/refs/heads/master/V2RayN_configs.txt
 
-### [订阅]() 2：
-https://gist.githubusercontent.com/WLget/aeb222e378a8dcbd74e06413dbacf400/raw/base64.txt
+### [订阅]()：https://gist.githubusercontent.com/WLget/aeb222e378a8dcbd74e06413dbacf400/raw/base64.txt
