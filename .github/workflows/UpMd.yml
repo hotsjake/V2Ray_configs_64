@@ -19,12 +19,11 @@ jobs:
       - name: 合并到README
         run: |
           # 插入到README的指定位置（示例：在特定注释后追加）
-          
-          sed -i '/<!-- TEXTBOX_START -->/r'<(
-          echo '```plaintext'
-          cat ConfigSub_list.md
-          echo '```'
-          ) README.md
+          awk '/<!-- TEXTBOX_START -->/ { 
+          print; 
+          system("echo '\''```diff\n$(cat ConfigSub_list.md)\n```'\''"); 
+          next 
+          } 1' README.md | sponge README.md
       - name: 提交变更
         uses: EndBug/add-and-commit@v9
         with:
