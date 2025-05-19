@@ -1,4 +1,4 @@
-## 没每小时更新一次
+## 每小时更新一次
 
 ## 节点订阅地址 1：
 https://raw.githubusercontent.com/WLget/angus_configs_64/refs/heads/master/V2RayN_configs.txt
