@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Download Gist Content
         run: |
-          wget -O ED-file.ed https://gist.githubusercontent.com/WLget/aeb222e378a8dcbd74e06413dbacf400/raw/base64.ed
+          wget -O ED-file.ed https://gist.githubusercontent.com/WLget/aeb222e378a8dcbd74e06413dbacf400/raw/base64.txt
       - name: Commit and Push Changes
         run: |
           git config --global user.name "GitHub Actions"
