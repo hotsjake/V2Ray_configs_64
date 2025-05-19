@@ -7,7 +7,7 @@ on:
       - main
   schedule:
     # Run every 1 minutes
-    - cron: "*/10 * * * *"
+    - cron: "*/1 * * * *"
     
 jobs:
   sync:
