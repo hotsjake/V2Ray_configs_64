@@ -1,4 +1,4 @@
-name: Sync MD to README
+nname: Sync MD to README
 permissions: write-all
 on:
   schedule:
@@ -19,13 +19,13 @@ jobs:
       - name: 合并到README
         run: |
           # 插入到README的指定位置（示例：在特定注释后追加）
-          sed -i '/<!-- INSERT_POINT -->/r external.md' README.md
+          sed -i '/<!-- 节点列表 -->/r external.md' README.md
 
       - name: 提交变更
         uses: EndBug/add-and-commit@v9
         with:
           add: "README.md"
-          message: "同步文件 [skip ci]"
+          message: "合并文件更新"
           committer: "GitHub Actions <actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
