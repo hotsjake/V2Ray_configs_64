@@ -1,4 +1,5 @@
 name: Sync MD to README
+permissions: write-all
 on:
   schedule:
     - cron: "*/15 * * * *"  # 每10分钟同步一次
