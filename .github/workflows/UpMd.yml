@@ -14,7 +14,7 @@ jobs:
 
       - name: 下载外部MD文件
         run: |
-          wget -O external.md https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/README.md
+          wget -O external.md https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.md
 
       - name: 合并到README
         run: |
