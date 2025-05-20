@@ -24,7 +24,7 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           add: "README.md"
-          message: "合并文件更新"
+          message: "Updated 10 minutes ago"
           committer: "GitHub Actions <actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
