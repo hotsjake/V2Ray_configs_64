@@ -13,7 +13,7 @@
 # v2ray免费节点订阅  
 
 ### [订阅地址]()：
-- `https://gist.githubusercontent.com/WLget/aeb222e378a8dcbd74e06413dbacf400/raw/base64.txt`
+- `https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.md`
 
 ### 节点列表
 
