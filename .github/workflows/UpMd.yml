@@ -14,12 +14,12 @@ jobs:
 
       - name: 下载外部MD文件
         run: |
-          wget -O external.md https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.md
+          wget -O external.md https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt
 
       - name: 合并到README
         run: |
           # 插入到README的指定位置（示例：在特定注释后追加）
-          sed -i '/<!-- INSERT_POINT -->/r ConfigSub_list.md' README.md
+          sed -i '/<!-- INSERT_POINT -->/r ConfigSub_list.txt' README.md
       - name: 提交变更
         uses: EndBug/add-and-commit@v9
         with:
