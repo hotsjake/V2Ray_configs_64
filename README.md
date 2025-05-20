@@ -3,7 +3,7 @@
 
 |  客户端  | Android  | Windows  |
 |  ----  | ----   | ----  |
-| v2ray  | [v2rayNG]((https://github.com/2dust/v2rayNG/releases/download/1.6.28/v2rayNG_1.6.28_arm64-v8a.apk)) | [v2rayN](https://github.com/2dust/v2rayN/releases/download/3.27/v2rayN-Core.zip) |
+| v2ray  | [v2rayNG](https://github.com/2dust/v2rayNG/releases/download/1.6.28/v2rayNG_1.6.28_arm64-v8a.apk)) | [v2rayN](https://github.com/2dust/v2rayN/releases/download/3.27/v2rayN-Core.zip) |
 ## v2rayN使用教程：[点击查看](https://v2rayn100.com/) 
 
 ## 节点导入方法  
