@@ -2,7 +2,7 @@ name: Sync MD to README
 permissions: write-all
 on:
   schedule:
-    - cron: "*/30 * * * *"  # 每33分钟同步一次
+    - cron: "*/63 * * * *"  # 每63分钟同步一次
   workflow_dispatch:  # 允许手动触发
 
 jobs:
