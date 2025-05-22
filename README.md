@@ -1,9 +1,9 @@
 # 公益免费v2ray节点订阅 每日更新
 所有v2ray免费节点都爬取自网络，请勿用于非法用途 。
 
-|客户端	|Android	|Windows|
----- |---- |---- |----|
-|v2ray	|v2rayNG	|v2rayN|
+|  客户端  | Android  | Windows  | iOS  |
+|  ----  | ----   | ----  |----  |
+| v2ray  | [v2rayNG](https://github.com/v2fly/v2ray-core/releases/download/v5.32.0/v2ray-android-arm64-v8a.zip) | [v2rayN](https://github.com/2dust/v2rayN/releases/download/7.12.3/v2rayN-windows-64-desktop.zip) | [OneClick]() |
 ## v2rayN使用教程：[点击查看]()
 
 ## 节点导入方法
