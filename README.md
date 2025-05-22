@@ -15,7 +15,7 @@
 `https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt`
 
 ### 节点列表
-```
+<pre>
 ss://YWVzLTI1Ni1nY206RU5ZR09ORFU5NFVXMUc2WA%3D%3D@8tv68qhq.slashdevslashnetslashtun.net:15010#%F0%9F%87%AD%F0%9F%87%B0%E9%A6%99%E6%B8%AF5%20%7C%20%E2%AC%87%EF%B8%8F%209.4MB%2Fs%7C100%25%7CDisney%7CYoutube
 vless://53fa8faf-ba4b-4322-9c69-a3e5b1555049@103.169.142.20:8880?encryption=none&security=none&type=ws&host=reedfree8mahsang2.redorg.ir&path=%2F%3Fed%3D2560#%F0%9F%87%AB%F0%9F%87%AE%E8%8A%AC%E5%85%B01%20%7C%20%E2%AC%87%EF%B8%8F%201.0MB%2Fs%7C0%25%7CDisney%7COpenai
 vless://53fa8faf-ba4b-4322-9c69-a3e5b1555049@62.72.166.20:8880?encryption=none&security=none&sni=reedfree8mahsang2.redorg.ir&type=ws&host=reedfree8mahsang2.redorg.ir&path=%2F%3Fed%3D2560#%F0%9F%87%B0%F0%9F%87%B7%E9%9F%A9%E5%9B%BD3%20%7C%20%E2%AC%87%EF%B8%8F%206.3MB%2Fs%7C58%25%7CNetflix%7CDisney%7COpenai
@@ -138,3 +138,4 @@ vless://TELEGRAM-NUFiLTER@nufilter.fastly80-2.hosting-ip.com:80?encryption=none&
 vless://11d0b0d0-28ac-47fb-ab11-5f80e81a26d0@germany.gamingbazirani.ir:600?encryption=none&security=tls&sni=marzban.negintel.xyz&fp=chrome&type=tcp&headerType=none#%F0%9F%87%AB%F0%9F%87%B7%E6%B3%95%E5%9B%BD8%20%7C%20%E2%AC%87%EF%B8%8F%204.8MB%2Fs%7C44%25%7CYoutube%7COpenai
 vless://303de733-7c10-43e3-8c53-5d0557f9346d@104.19.54.50:8080?encryption=none&security=none&type=ws&host=moftvpn.elmahstyle.xyz.&path=%2F%40Moft_Vpn----%40Moft_Vpn----%40Moft_Vpn----%40Moft_Vpn----%40Moft_Vpn----%40Moft_Vpn----%40Moft_Vpn----%40Moft_Vpn----%40Moft_Vpn----%40Moft_Vpn----%40Moft_Vpn----%40Moft_Vpn%3Fed%3D2048#%F0%9F%87%AC%F0%9F%87%A7%E8%8B%B1%E5%9B%BD3%20%7C%20%E2%AC%87%EF%B8%8F%207.0MB%2Fs%7C100%25%7COpenai
 vless://b072d14f-133d-4f9f-e3d8-1185e6a00533@151.101.2.219:80?encryption=none&security=none&type=ws&host=JOKERRVPN.com&path=%2FTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%2CTELEGRAM-%40JOKERRVPN%3Fed%3D2048#%F0%9F%87%A9%F0%9F%87%AA%E5%BE%B7%E5%9B%BD26%20%7C%20%E2%AC%87%EF%B8%8F%207.3MB%2Fs%7C19%25
+</pre>
