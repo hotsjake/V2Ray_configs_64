@@ -6,7 +6,7 @@ on:
     branches:
       - main
   schedule:
-    # Run every 30 minutes
+    # Run every 60 minutes
     - cron: "*/60 * * * *"
     
 jobs:
