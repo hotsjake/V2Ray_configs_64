@@ -1,4 +1,4 @@
-# 公益免费v2ray节点订阅 每日更新
+# 公益免费v2ray节点订阅 更新时间<!-- AUTO_UPDATE_TIME -->
 所有v2ray免费节点都爬取自网络，请勿用于非法用途 。
 
 |  客户端  | Android  | Windows  | iOS  |
