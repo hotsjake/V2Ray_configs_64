@@ -28,7 +28,7 @@ jobs:
           awk -i inplace '
             /<!-- AUTO_UPDATE_TIME -->/ { 
               print; 
-              print "公益免费v2ray节点订阅 更新时间: `'"$current_time"'`"; 
+              print "# 公益免费v2ray节点订阅 更新时间: \n`'"$current_time"'`"; 
               next 
             } 
             1
