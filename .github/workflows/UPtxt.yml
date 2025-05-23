@@ -2,8 +2,8 @@ name: Sync MD to README
 permissions: write-all
 on:
   schedule:
-    - cron: "*/63 * * * *"  # 每63分钟同步一次
-  workflow_dispatch:  # 允许手动触发
+    - cron: "0 */3 * * *"  # 调整为每3小时同步（避免频繁触发）
+  workflow_dispatch:
 
 jobs:
   sync:
@@ -12,18 +12,68 @@ jobs:
       - name: 检出仓库
         uses: actions/checkout@v4
 
-      - name: 下载外部MD文件
+      - name: 下载外部文件
         run: |
-          wget -O external.md https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt
+          # 增加重试机制和超时控制[5](@ref)
+          curl --retry 3 --max-time 30 -o ConfigSub_list.txt \
+            https://raw.githubusercontent.com/WLget/V2Ray_configs_64/master/ConfigSub_list.txt
+          
+          # 编码转换和换行符统一[1,3](@ref)
+          encoding=$(file -b --mime-encoding ConfigSub_list.txt)
+          iconv -f $encoding -t UTF-8 ConfigSub_list.txt -o temp.txt
+          sed -i 's/\r$//' temp.txt
+          mv temp.txt ConfigSub_list.txt
+
+      - name: 预处理内容
+        run: |
+          # 转义MD特殊字符[3,7](@ref)
+          sed -i 's/#/\\#/g; s/\*/\\*/g; s/_/\\_/g' ConfigSub_list.txt
+          
+          # 添加内容边界标识[8](@ref)
+          echo -e "\n<!-- AUTO_GENERATED_CONTENT -->" >> ConfigSub_list.txt
+
       - name: 合并到README
         run: |
-          # 插入到README的指定位置（示例：在特定注释后追加）
-          sed -i '/<!-- TEXTBOX_START -->/r ConfigSub_list.txt' README.md
+          # 检查目标标记是否存在[4,7](@ref)
+          if ! grep -q "<!-- TEXTBOX_START -->" README.md; then
+            echo "错误：未找到插入位置标记" >&2
+            exit 1
+          fi
+
+          # 创建备份文件[2](@ref)
+          cp README.md README.bak
+          
+          # 精确替换内容区块[8](@ref)
+          awk '/<!-- TEXTBOX_START -->/{print;system("cat ConfigSub_list.txt");next}1' README.bak > README.md
+          
+          # 删除临时备份
+          rm README.bak
+
+      - name: 完整性校验
+        run: |
+          # 行数对比检查[1,4](@ref)
+          original_lines=$(wc -l < ConfigSub_list.txt)
+          merged_lines=$(sed -n '/<!-- TEXTBOX_START -->/,/<!-- TEXTBOX_END -->/p' README.md | wc -l)
+          
+          if [ $merged_lines -lt $((original_lines + 2)) ]; then
+            echo "错误：合并内容行数异常 (原始:$original_lines vs 合并:$merged_lines)" >&2
+            exit 1
+          fi
+
+          # 校验和验证[2,6](@ref)
+          original_md5=$(md5sum ConfigSub_list.txt | awk '{print $1}')
+          merged_md5=$(sed -n '/<!-- TEXTBOX_START -->/,/<!-- TEXTBOX_END -->/p' README.md | md5sum | awk '{print $1}')
+          
+          if [ "$original_md5" != "$merged_md5" ]; then
+            echo "错误：内容校验失败" >&2
+            exit 1
+          fi
+
       - name: 提交变更
         uses: EndBug/add-and-commit@v9
         with:
           add: "README.md"
-          message: "Updated 10 minutes ago"
-          committer: "GitHub Actions <actions@github.com>"
+          message: "AutoSync: $(date +'%Y-%m-%d %H:%M')"
+          committer: "GitHub Actions <noreply@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
