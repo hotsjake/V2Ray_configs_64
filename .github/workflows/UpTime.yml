@@ -22,12 +22,12 @@ jobs:
       - name: 执行时间更新脚本
         run: |
           # 生成当前时间（带时区）
-          current_time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          current_time=$(TZ="Asia/Shanghai" date +"%Y-%m-%d %H:%M:%S")
           
           # 替换锚点内容（使用awk避免临时文件）[3,7](@ref)
           awk -i inplace '
-           /<!-- AUTO_UPDATE_TIME -->/ { 
-              print "# 最近更新时间  \n`" "'"$current_time"'" "`"; 
+          /<!-- AUTO_UPDATE_TIME -->/ { 
+              print "# 最近更新时间：" "'"$current_time"'" ""; 
               next 
             } 
             1
