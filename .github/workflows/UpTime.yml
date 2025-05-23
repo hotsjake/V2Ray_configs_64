@@ -29,7 +29,7 @@ jobs:
           /<!-- AUTO_UPDATE_TIME -->/ { 
               print
               getline  # 跳过已存在的时间行
-              print "## v2ray节点订阅 每日更新 更新时间：" "'"$current_time"'" ""; 
+              print "# v2ray节点订阅 每日更新 更新时间：" "'"$current_time"'" ""; 
               next 
             } 
             1
