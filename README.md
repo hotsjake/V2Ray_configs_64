@@ -28,7 +28,8 @@
 ### 配置环境变量（Varidbles）
 - 在 Pages 项目设置里：
 - 打开 【设置 Settings】→ 【环境变量 Environment Variables】 -添加这些变量：
-  |  变量名称  |释义（注意： 变量名字全大写！） |
+  
+|  变量名称  | 释义（注意： 变量名字全大写！） |
 |  ----  | ----   |
 |  UUID  | 自己需要生成一个UUID，可以去这个网站生成https://1024tools.com/uuid  |
 |  ----  | ----   | 
