@@ -32,9 +32,7 @@
 |  变量名称  | 释义（注意： 变量名字全大写！） |
 |  ----  | ----   |
 |  UUID  | 自己需要生成一个UUID，可以去这个网站生成https://1024tools.com/uuid  |
-|  ----  | ----   | 
 |  TR_PASS  | 自己设一个密码  |
-|  ----  | ----   | 
 |  FALLBACK  | 设置成example.com  |
 ### 配置KV 存储绑定
 - Pages Functions 也可以使用 KV， -需要绑定 KV 存储桶。
