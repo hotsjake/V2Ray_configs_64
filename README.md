@@ -36,7 +36,11 @@
 |  FALLBACK  | 设置成example.com  |
 ### 配置KV 存储绑定
 - Pages Functions 也可以使用 KV， -需要绑定 KV 存储桶。
-- 步骤： -Cloudflare 后台左侧【Workers & KV】→ 【KV 存储】 -创建一个新的命名空间（比如叫 test） -回到 Pages 项目的【Settings → KV Bindings】 -添加绑定： -Binding Name Namespace -kv 你刚才创建的 test ✅ Binding Name 必须是 kv 小写，保持和代码对应！
+- 步骤：
+- 1. Cloudflare 后台左侧【Workers & KV】→ 【KV 存储】
+  2. 创建一个新的命名空间（比如叫 test）
+  3. 回到 Pages 项目的【Settings → KV Bindings】
+  4. 添加绑定： -Binding Name Namespace -kv 你刚才创建的 test ✅ Binding Name 必须是 kv 小写，保持和代码对应！
 
 ### 访问面板
 - 部署完成后：
