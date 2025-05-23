@@ -1,0 +1,44 @@
+name: Auto Update Time
+on:
+  schedule:
+    - cron: "0 * * * *"  # 每小时的第0分钟执行（UTC时间）
+  workflow_dispatch:     # 支持手动触发
+
+permissions:  # 关键权限配置[7](@ref)
+  contents: write       # 允许写入README.md
+
+jobs:
+  update-time:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4  # 官方推荐版本[3](@ref)
+
+      - name: 设置Python环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"  # 指定Python版本[6](@ref)
+
+      - name: 执行时间更新脚本
+        run: |
+          # 生成当前时间（带时区）
+          current_time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          
+          # 替换锚点内容（使用awk避免临时文件）[3,7](@ref)
+          awk -i inplace '
+            /<!-- AUTO_UPDATE_TIME -->/ { 
+              print; 
+              print "**最近更新时间**: `'"$current_time"'`"; 
+              next 
+            } 
+            1
+          ' README.md
+
+      - name: 提交变更
+        uses: EndBug/add-and-commit@v9  # 自动化提交动作[7](@ref)
+        with:
+          add: "README.md"
+          message: "Auto: 更新时间戳 [skip ci]"
+          committer: "GitHub Bot <bot@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
