@@ -16,9 +16,9 @@
 `https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt`
 
 # 自己搭建节点教程
-###节点搭建使用CF的方式部署
-CF网站：https://dash.cloudflare.com/
-部署项目地址：https://github.com/WLget/wk-Auto-update
+### 节点搭建使用CF的方式部署
+- CF网站：https://dash.cloudflare.com/
+- 部署项目地址：https://github.com/WLget/wk-Auto-update
 
 ## 部署步骤
 
