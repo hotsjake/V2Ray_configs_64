@@ -28,7 +28,7 @@ jobs:
           awk -i inplace '
             /<!-- AUTO_UPDATE_TIME -->/ { 
               print; 
-              print "**最近更新时间**: `'"$current_time"'`"; 
+              print "公益免费v2ray节点订阅 更新时间: `'"$current_time"'`"; 
               next 
             } 
             1
@@ -38,7 +38,7 @@ jobs:
         uses: EndBug/add-and-commit@v9  # 自动化提交动作[7](@ref)
         with:
           add: "README.md"
-          message: "Auto: 更新时间戳 [skip ci]"
+          message: "Updated 10 minutes ago"
           committer: "GitHub Bot <bot@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
