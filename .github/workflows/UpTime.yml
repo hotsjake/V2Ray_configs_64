@@ -27,7 +27,7 @@ jobs:
           # 替换锚点内容（使用awk避免临时文件）[3,7](@ref)
           awk -i inplace '
           /<!-- AUTO_UPDATE_TIME -->/ { 
-              print "# 最近更新时间：" "'"$current_time"'" ""; 
+              print "# v2ray节点订阅每日更新 最新更新时间：" "'"$current_time"'" ""; 
               next 
             } 
             1
