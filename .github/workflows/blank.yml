@@ -6,8 +6,8 @@ on:
     branches:
       - main
   schedule:
-    # Run every 120 minutes
-    - cron: "*/120 * * * *"
+    # Run every 180 minutes
+    - cron: "*/180 * * * *"
     
 jobs:
   sync:
