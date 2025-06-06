@@ -1,9 +1,8 @@
 name: Auto Update Time
 on:
-  schedule:
-    # Run every 120 minutes
-    - cron: "*/120 * * * *"
-  workflow_dispatch:     # 支持手动触发
+ schedule:
+    - cron: '0 */3 * * *'   # 每 3 小时运行（UTC 时间）
+  workflow_dispatch:        # 可选：支持手动触发[1,7](@ref)
 
 permissions:  # 关键权限配置[7](@ref)
   contents: write       # 允许写入README.md
