@@ -1,12 +1,13 @@
 name: Auto Update Time
-on:
- schedule:
-    # Run every 3 hours
-    - cron: '0 */3 * * *'
-  workflow_dispatch:        # 可选：支持手动触发[1,7](@ref)
+permissions: write-all
 
-permissions:  # 关键权限配置[7](@ref)
-  contents: write       # 允许写入README.md
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 */3 * * *'   # 每 3 小时运行（UTC 时间）
+  workflow_dispatch:        # 可选：支持手动触发[1,7](@ref)
 
 jobs:
   update-time:
